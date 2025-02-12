@@ -1,0 +1,116 @@
+/* Original by Carson Monroe! https://codepen.io/nerdy-girl/pen/ZEzWQXK */
+
+.navigationWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    color: white;
+    width: 600px;
+}
+
+.logoWrapper {
+    display: flex;
+}
+
+.stylish {
+    font-weight: bold;
+}
+
+.logo {
+    padding-left: 4px;
+    color: #ea4f4c;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+.parent {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.link:hover {
+    color: #ea4f4c;
+}
+
+.fas {
+    color: #ea4f4c;
+    margin: -2px 4px 0;
+    font-size: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-minus {
+    opacity: 0;
+    position: absolute;
+    left: -16px;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-plus {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0 !important;
+}
+
+.visible {
+    opacity: 1 !important;
+}
+
+.subnavigation {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.parent.active .subnavigation {
+    display: block;
+}
+
+.active .subnavigation {
+    display: flex;
+}
+
+.active .fa-minus {
+    opacity: 1 !important;
+    font-size: 8px;
+}
+
+.active .fa-plus {
+    opacity: 0 !important;
+}
+
+.main {
+    text-transform: capitalize;
+}
+
+.invisible {
+    opacity: 0 !important;
+}

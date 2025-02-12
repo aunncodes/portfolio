@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import "./Navbar.css";
 
 export default function Navbar() {
     const [active, setActive] = useState(null);
@@ -29,9 +32,9 @@ export default function Navbar() {
                         onClick={() => handleToggle("clients")}
                     >
                         <Link className="link" href="#">
-                            <i className={`fas fa-minus ${active === "clients" ? "visible" : ""}`}></i>
+                            <FontAwesomeIcon icon={faMinus} className={active === "clients" ? "visible" : "hidden"} />
+                            <FontAwesomeIcon icon={faPlus} className={active === "clients" ? "hidden" : "visible"} />
                             Clients
-                            <i className={`fas fa-plus ${active === "clients" ? "hidden" : ""}`}></i>
                         </Link>
                         <ul className="subnavigation">
                             <li><Link className="link" href="#">Burger King</Link></li>
@@ -44,10 +47,10 @@ export default function Navbar() {
                         className={`parent ${active === "services" ? "active" : ""}`}
                         onClick={() => handleToggle("services")}
                     >
-                        <Link className="link main" href="#">
-                            <i className={`fas fa-minus ${active === "services" ? "visible" : ""}`}></i>
+                        <Link className="link" href="#">
+                            <FontAwesomeIcon icon={faMinus} className={active === "services" ? "visible" : "hidden"} />
+                            <FontAwesomeIcon icon={faPlus} className={active === "services" ? "hidden" : "visible"} />
                             Services
-                            <i className={`fas fa-plus ${active === "services" ? "hidden" : ""}`}></i>
                         </Link>
                         <ul className="subnavigation">
                             <li><Link className="link" href="#">Print Design</Link></li>
@@ -59,131 +62,6 @@ export default function Navbar() {
                     <li className="parent"><Link className="link main" href="#">Contact</Link></li>
                 </ul>
             </nav>
-            <style jsx>{`
-                body {
-                  font-family: "Roboto", sans-serif;
-                  margin: 0;
-                  padding: 0;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  height: 100vh;
-                  background: linear-gradient(45deg, #ea4f4c 0%, #6d0019 100%);
-                }
-
-                .navigationWrapper {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 20px;
-                    background-color: #222;
-                    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
-                    color: white;
-                    width: 600px;
-                }
-        
-                .logoWrapper {
-                  display: flex;
-                }
-        
-                .stylish {
-                  font-weight: bold;
-                }
-        
-                .logo {
-                  padding-left: 4px;
-                  color: #ea4f4c;
-                }
-        
-                .navigation {
-                  display: flex;
-                  list-style-type: none;
-                }
-
-                .parent {
-                    position: relative;
-                    padding: 10px;
-                    cursor: pointer;
-                }
-        
-                .link {
-                  position: relative;
-                  display: flex;
-                  align-items: center;
-                  text-decoration: none;
-                  transition: all 0.3s ease-in-out;
-                  color: white;
-                }
-        
-                .link:hover {
-                  color: #ea4f4c;
-                }
-        
-                .fas {
-                  color: #ea4f4c;
-                  margin: -2px 4px 0;
-                  font-size: 10px;
-                  transition: all 0.3s ease-in-out;
-                }
-        
-                .fa-minus {
-                  opacity: 0;
-                  position: absolute;
-                  left: -16px;
-                  top: 3px;
-                  transition: all 0.3s ease-in-out;
-                }
-        
-                .fa-plus {
-                  opacity: 1;
-                  transition: all 0.3s ease-in-out;
-                }
-        
-                .hidden {
-                  opacity: 0 !important;
-                }
-        
-                .visible {
-                  opacity: 1 !important;
-                }
-
-                .subnavigation {
-                    display: none;
-                    position: absolute;
-                    background-color: #222;
-                    top: 100%;
-                    left: 0;
-                    min-width: 150px;
-                    padding: 10px;
-                    border-radius: 5px;
-                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                    z-index: 1000;
-                }
-
-                .parent.active .subnavigation {
-                    display: block;
-                }
-        
-                .active .subnavigation {
-                  display: flex;
-                }
-        
-                .active .fa-minus {
-                  opacity: 1 !important;
-                  font-size: 8px;
-                }
-        
-                .active .fa-plus {
-                  opacity: 0 !important;
-                }
-
-                .invisible {
-                  opacity: 0 !important;
-                  transform: translate(50px, 0);
-                }
-            `}</style>
         </>
     );
 }
