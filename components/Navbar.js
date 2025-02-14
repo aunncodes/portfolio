@@ -16,8 +16,8 @@ export default function Navbar() {
         <>
             <nav className="navigationWrapper">
                 <div className="logoWrapper">
-                    <span className="stylish">Stylish</span>
-                    <span className="logo">Logo</span>
+                    <span className="stylish">Aunn</span>
+                    <span className="logo">Codes</span>
                 </div>
                 <ul className="navigation">
                     <li className="parent">
@@ -33,31 +33,31 @@ export default function Navbar() {
                     >
                         <Link className="link" href="#">
                             <FontAwesomeIcon icon={faMinus} className={active === "clients" ? "visible" : "hidden"} />
-                            Clients
+                            Projects
                             <FontAwesomeIcon icon={faPlus} className={active === "clients" ? "hidden" : "visible"} />
                         </Link>
                         <ul className="subnavigation">
-                            <li><Link className="link" href="#">Burger King</Link></li>
-                            <li><Link className="link" href="#">Southwest Airlines</Link></li>
-                            <li><Link className="link" href="#">Levi Strauss</Link></li>
+                            <li><Link className="link" href="#">Portfolio Website</Link></li>
+                            <li><Link className="link" href="#">Snake AI</Link></li>
+                            <li><Link className="link" href="#"></Link></li>
                         </ul>
                     </li>
 
-                    <li
-                        className={`parent ${active === "services" ? "active" : ""}`}
-                        onClick={() => handleToggle("services")}
-                    >
-                        <Link className="link" href="#">
-                            <FontAwesomeIcon icon={faMinus} className={active === "services" ? "visible" : "hidden"} />
-                            Services
-                            <FontAwesomeIcon icon={faPlus} className={active === "services" ? "hidden" : "visible"} />
-                        </Link>
-                        <ul className="subnavigation">
-                            <li><Link className="link" href="#">Print Design</Link></li>
-                            <li><Link className="link" href="#">Web Design</Link></li>
-                            <li><Link className="link" href="#">Mobile App Development</Link></li>
-                        </ul>
-                    </li>
+                    {/*<li*/}
+                    {/*    className={`parent ${active === "services" ? "active" : ""}`}*/}
+                    {/*    onClick={() => handleToggle("services")}*/}
+                    {/*>*/}
+                    {/*    <Link className="link" href="#">*/}
+                    {/*        <FontAwesomeIcon icon={faMinus} className={active === "services" ? "visible" : "hidden"} />*/}
+                    {/*        Services*/}
+                    {/*        <FontAwesomeIcon icon={faPlus} className={active === "services" ? "hidden" : "visible"} />*/}
+                    {/*    </Link>*/}
+                    {/*    <ul className="subnavigation">*/}
+                    {/*        <li><Link className="link" href="#">Print Design</Link></li>*/}
+                    {/*        <li><Link className="link" href="#">Web Design</Link></li>*/}
+                    {/*        <li><Link className="link" href="#">Mobile App Development</Link></li>*/}
+                    {/*    </ul>*/}
+                    {/*</li>*/}
 
                     <li className="parent"><Link className="link" href="#">Contact</Link></li>
                 </ul>
