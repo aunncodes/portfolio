@@ -33,8 +33,8 @@ export default function Navbar() {
                     >
                         <Link className="link" href="#">
                             <FontAwesomeIcon icon={faMinus} className={active === "clients" ? "visible" : "hidden"} />
-                            <FontAwesomeIcon icon={faPlus} className={active === "clients" ? "hidden" : "visible"} />
                             Clients
+                            <FontAwesomeIcon icon={faPlus} className={active === "clients" ? "hidden" : "visible"} />
                         </Link>
                         <ul className="subnavigation">
                             <li><Link className="link" href="#">Burger King</Link></li>
@@ -49,8 +49,8 @@ export default function Navbar() {
                     >
                         <Link className="link" href="#">
                             <FontAwesomeIcon icon={faMinus} className={active === "services" ? "visible" : "hidden"} />
-                            <FontAwesomeIcon icon={faPlus} className={active === "services" ? "hidden" : "visible"} />
                             Services
+                            <FontAwesomeIcon icon={faPlus} className={active === "services" ? "hidden" : "visible"} />
                         </Link>
                         <ul className="subnavigation">
                             <li><Link className="link" href="#">Print Design</Link></li>
@@ -59,7 +59,7 @@ export default function Navbar() {
                         </ul>
                     </li>
 
-                    <li className="parent"><Link className="link main" href="#">Contact</Link></li>
+                    <li className="parent"><Link className="link" href="#">Contact</Link></li>
                 </ul>
             </nav>
         </>

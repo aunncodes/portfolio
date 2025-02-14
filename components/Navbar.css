@@ -60,7 +60,6 @@
     opacity: 0;
     position: absolute;
     left: -16px;
-    top: 3px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -105,10 +104,6 @@
 
 .active .fa-plus {
     opacity: 0 !important;
-}
-
-.main {
-    text-transform: capitalize;
 }
 
 .invisible {
