@@ -3,11 +3,7 @@
 import { useState } from "react";
 
 export default function Terminal() {
-  const [lines, setLines] = useState<string[]>([
-    "Welcome to cmd",
-    "Type `help` to get started.",
-    "",
-  ]);
+  const [lines, setLines] = useState<string[]>(["Welcome to cmd", "Type `help` to get started.", ""]);
   const [input, setInput] = useState("");
 
   function handleSubmit(e: React.FormEvent) {
@@ -25,12 +21,7 @@ export default function Terminal() {
 
       <form onSubmit={handleSubmit} className="flex">
         <span className="mr-2">$</span>
-        <input
-          autoFocus
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          className="flex-1 bg-transparent outline-none"
-        />
+        <input autoFocus value={input} onChange={e => setInput(e.target.value)} className="flex-1 bg-transparent outline-none" />
       </form>
     </div>
   );
