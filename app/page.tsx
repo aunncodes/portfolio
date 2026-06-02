@@ -35,7 +35,7 @@ export default function Home() {
         <h2>Projects</h2>
 
         <div className="projects">
-          <a className="project" href="https://github.com/devilExE3/FactoryBuilder">
+          <a className="project" href="https://github.com/devilExE3/FactoryBuilder" target="_blank" rel="noreferrer">
             <div>
               <h3>Factory Builder</h3>
               <p>A Minecraft Datapack for a fun incremental factory game.</p>
@@ -44,10 +44,7 @@ export default function Home() {
             <span>View</span>
           </a>
 
-          <a
-            className="project"
-            href="https://github.com/aunncodes/TownOfSalem"
-          >
+          <a className="project" href="https://github.com/aunncodes/TownOfSalem" target="_blank" rel="noreferrer">
             <div>
               <h3>Town Of Salem</h3>
               <p>A recreation of the popular game Town Of Salem, using Python and Node.js.</p>
@@ -56,10 +53,7 @@ export default function Home() {
             <span>View</span>
           </a>
 
-          <a
-            className="project"
-            href="https://github.com/aunncodes/Homebase"
-          >
+          <a className="project" href="https://github.com/aunncodes/Homebase" target="_blank" rel="noreferrer">
             <div>
               <h3>Homebase</h3>
               <p>A simplistic Chrome extension for a custom new tab page, with a variety of themes and tools.</p>
@@ -74,9 +68,9 @@ export default function Home() {
         <h2>Contact</h2>
 
         <ul className="contact-list">
-          <li>You can email me through <a href="mailto:choprasahil.sc@gmail.com">choprasahil.sc@gmail.com</a>.</li>
-          <li>You can message me on discord through <a href="https://discord.com/users/682054289031823382">aunn.exe</a>.</li>
-          <li>You can find my work on <a href="https://github.com/aunncodes">GitHub</a>.</li>
+          <li>You can email me through <a href="mailto:choprasahil.sc@gmail.com" target="_blank">choprasahil.sc@gmail.com</a>.</li>
+          <li>You can message me on discord through <a href="https://discord.com/users/682054289031823382" target="_blank" rel="noreferrer">aunn.exe</a>.</li>
+          <li>You can find my work on <a href="https://github.com/aunncodes" target="_blank" rel="noreferrer">GitHub</a>.</li>
         </ul>
       </section>
     </main>
