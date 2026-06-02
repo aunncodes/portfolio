@@ -73,11 +73,11 @@ export default function Home() {
       <section className="section">
         <h2>Contact</h2>
 
-        <p>
-          You can email me through <a href="mailto:choprasahil.sc@gmail.com">choprasahil.sc@gmail.com</a>.<br/>
-          You can message me on discord through <a href="https://discord.com/users/682054289031823382">aunn.exe</a>.<br/>
-          You can find my work on <a href="https://github.com/aunncodes">GitHub</a>.<br/>
-        </p>
+        <ul className="contact-list">
+          <li>You can email me through <a href="mailto:choprasahil.sc@gmail.com">choprasahil.sc@gmail.com</a>.</li>
+          <li>You can message me on discord through <a href="https://discord.com/users/682054289031823382">aunn.exe</a>.</li>
+          <li>You can find my work on <a href="https://github.com/aunncodes">GitHub</a>.</li>
+        </ul>
       </section>
     </main>
   );

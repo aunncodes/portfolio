@@ -18,7 +18,6 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--text);
   font-family:
     Inter,
@@ -28,6 +27,18 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.08), transparent 30rem),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    var(--bg);
+  background-size:
+    auto,
+    auto,
+    48px 48px,
+    48px 48px,
+    auto;
 }
 
 a {
@@ -108,17 +119,54 @@ h1 {
   line-height: 1.7;
 }
 
+.contact-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.contact-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--link);
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.5);
+}
+
+.contact-list a {
+  font-weight: 500;
+}
+
 .projects {
   display: grid;
   gap: 0;
 }
 
 .project {
+  margin: 0 -12px;
+  border-radius: 10px;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px 0;
+  padding: 18px 12px;
   border-top: 1px solid var(--border);
 }
 
@@ -142,15 +190,6 @@ h1 {
 .project span {
   color: var(--muted);
   font-size: 14px;
-}
-
-.project {
-  margin: 0 -12px;
-  padding: 18px 12px;
-  border-radius: 10px;
-  transition:
-    border-color 160ms ease,
-    transform 160ms ease;
 }
 
 .project:hover {
