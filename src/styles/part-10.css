@@ -1,0 +1,95 @@
+/* v4 polish: natural starfield, fixed GitHub pointer response, and contact particles. */
+.feature-project--duck .feature-project__copy h3 {
+  max-width: 100%;
+  padding-right: 0.12em;
+  font-size: clamp(42px, 5vw, 72px);
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.github-card-pointer {
+  --github-pointer-x: 0;
+  --github-pointer-y: 0;
+  --github-glare-x: 50%;
+  --github-glare-y: 50%;
+  width: 100%;
+  transform:
+    translate3d(calc(var(--github-pointer-x) * 12px), calc(var(--github-pointer-y) * 10px), 0)
+    perspective(1250px)
+    rotateX(calc(var(--github-pointer-y) * -6deg))
+    rotateY(calc(var(--github-pointer-x) * 8deg));
+  transform-style: preserve-3d;
+  transition: filter 180ms ease;
+  will-change: transform;
+}
+
+.github-card-pointer:hover {
+  filter: drop-shadow(0 32px 42px rgba(0, 0, 0, 0.24));
+}
+
+.github-card-pointer .github-card-frame {
+  transform: translateZ(0);
+}
+
+.github-card-pointer-glare {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.72;
+  background: radial-gradient(
+    circle at var(--github-glare-x) var(--github-glare-y),
+    rgba(185, 231, 255, 0.19),
+    rgba(104, 174, 255, 0.055) 18%,
+    transparent 43%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.contact__panel--particles {
+  grid-template-columns: minmax(0, 1.2fr) minmax(310px, 0.72fr);
+  isolation: isolate;
+}
+
+.contact__particle-canvas {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.contact__panel--particles .contact__copy,
+.contact__panel--particles .contact__links {
+  position: relative;
+  z-index: 3;
+}
+
+.contact__panel--particles::before {
+  right: -120px;
+  top: -190px;
+  width: 450px;
+  height: 450px;
+  opacity: 0.62;
+}
+
+.contact__panel--particles::after {
+  right: 90px;
+  top: -70px;
+  width: 210px;
+  height: 210px;
+  opacity: 0.48;
+}
+
+.contact__hub,
+.contact__signal {
+  display: none !important;
+}
+
+@media (max-width: 980px) {
+  .contact__panel--particles {
+    grid-template-columns: 1fr;
+  }
+}
