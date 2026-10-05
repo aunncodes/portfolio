@@ -112,8 +112,8 @@ export default function App() {
       <main id="top">
         <Hero active={revealing || !loading} />
         <Projects />
-        <GitHubSection />
         <Skills />
+        <GitHubSection />
         <Experience />
         <Contact />
       </main>
