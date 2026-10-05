@@ -189,7 +189,7 @@ export default function Hero({ active = true }) {
         <div className="portrait-backdrop portrait-backdrop--a" aria-hidden="true" />
         <div className="portrait-backdrop portrait-backdrop--b" aria-hidden="true" />
         <div className="portrait-card" ref={cardRef}>
-          <img src="/img.png" alt="Sahil Chopra" />
+          <img src="/portrait.webp" alt="Sahil Chopra" />
           <div className="portrait-card__shine" aria-hidden="true" />
         </div>
       </div>
