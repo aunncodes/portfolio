@@ -4,6 +4,7 @@ import BackgroundEffects from './components/BackgroundEffects'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 import GitHubSection from './components/GitHubSection'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
@@ -34,7 +35,7 @@ export default function App() {
   }, [loading])
 
   useEffect(() => {
-    const revealTargets = [...document.querySelectorAll('.feature-project, .github-section, .experience, .contact, .project-index')]
+    const revealTargets = [...document.querySelectorAll('.feature-project, .skills, .github-section, .experience, .contact, .project-index')]
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -64,12 +65,12 @@ export default function App() {
         const rect = card.getBoundingClientRect()
         const progress = clamp((viewport - rect.top) / (viewport + rect.height), 0, 1)
         const centered = progress - 0.5
-        card.style.setProperty('--media-shift', `${centered * -38}px`)
-        card.style.setProperty('--copy-shift', `${centered * -30}px`)
-        card.style.setProperty('--visual-shift', `${centered * 24}px`)
+        card.style.setProperty('--media-shift', centered * -38 + 'px')
+        card.style.setProperty('--copy-shift', centered * -30 + 'px')
+        card.style.setProperty('--visual-shift', centered * 24 + 'px')
         card.style.setProperty('--section-progress', progress.toFixed(3))
-        card.style.setProperty('--section-sway', `${centered * (index % 2 === 0 ? -1.8 : 1.8)}deg`)
-        card.style.setProperty('--project-title-x', `${18 + progress * 68}%`)
+        card.style.setProperty('--section-sway', centered * (index % 2 === 0 ? -1.8 : 1.8) + 'deg')
+        card.style.setProperty('--project-title-x', 18 + progress * 68 + '%')
       })
 
       if (githubScroll && githubWrap) {
@@ -78,14 +79,14 @@ export default function App() {
         const rotateY = -10 + progress * 20
         const rotateX = 5 - progress * 8
         const lift = (progress - 0.5) * -45
-        githubScroll.style.transform = `translate(-50%, -50%) translateY(${lift}px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
+        githubScroll.style.transform = 'translate(-50%, -50%) translateY(' + lift + 'px) rotateY(' + rotateY + 'deg) rotateX(' + rotateX + 'deg)'
       }
 
       sectionHeadings.forEach((heading) => {
         const rect = heading.getBoundingClientRect()
         const progress = clamp((viewport - rect.top) / (viewport + rect.height), 0, 1)
         heading.style.setProperty('--heading-progress', progress.toFixed(3))
-        heading.style.setProperty('--heading-x', `${16 + progress * 68}%`)
+        heading.style.setProperty('--heading-x', 16 + progress * 68 + '%')
       })
     }
 
@@ -112,6 +113,7 @@ export default function App() {
         <Hero active={revealing || !loading} />
         <Projects />
         <GitHubSection />
+        <Skills />
         <Experience />
         <Contact />
       </main>
