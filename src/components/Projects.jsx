@@ -43,22 +43,6 @@ export default function Projects() {
         </TiltCard>
       </article>
 
-      <article className="feature-project feature-project--sentinel" data-project-card>
-        <div className="feature-project__copy">
-          <h3>Sentinels FTC</h3>
-          <p><strong>Team Lead / Programmer.</strong> Built and maintain the FTC team website and the Sentinel Hacks website.</p>
-          <ProjectLinks>
-            <a href="https://www.sentinelsftc.tech/" target="_blank" rel="noreferrer" className="magnetic">FTC site ↗</a>
-            <a href="https://sentinelhacks.tech/" target="_blank" rel="noreferrer" className="magnetic">Hackathon site ↗</a>
-          </ProjectLinks>
-        </div>
-        <TiltCard className="sentinel-media">
-          <div className="sentinel-media__photo sentinel-media__photo--one"><img src={assets.sentinelOne} alt="Sentinels FTC at competition" loading="lazy" /></div>
-          <div className="sentinel-media__photo sentinel-media__photo--two"><img src={assets.sentinelTwo} alt="Sentinels FTC team during competition" loading="lazy" /></div>
-          <div className="sentinel-media__card"><img src={assets.sentinelHacks} alt="Sentinel Hacks social card" loading="lazy" /></div>
-        </TiltCard>
-      </article>
-
       <article className="feature-project feature-project--duck" data-project-card>
         <div className="feature-project__copy">
           <h3>Galactic Domination</h3>
@@ -74,6 +58,22 @@ export default function Projects() {
           <img className="duck-scene__main" src={assets.duckThrone} alt="Warlord duck character from the game" loading="lazy" />
           <img className="duck-scene__side duck-scene__side--right" src={assets.duckGeneral} alt="" loading="lazy" />
           <span className="project-frame__glare" aria-hidden="true" />
+        </TiltCard>
+      </article>
+
+      <article className="feature-project feature-project--sentinel" data-project-card>
+        <div className="feature-project__copy">
+          <h3>Sentinels FTC</h3>
+          <p><strong>Team Lead / Programmer.</strong> Built and maintain the FTC team website and the Sentinel Hacks website.</p>
+          <ProjectLinks>
+            <a href="https://www.sentinelsftc.tech/" target="_blank" rel="noreferrer" className="magnetic">FTC site ↗</a>
+            <a href="https://sentinelhacks.tech/" target="_blank" rel="noreferrer" className="magnetic">Hackathon site ↗</a>
+          </ProjectLinks>
+        </div>
+        <TiltCard className="sentinel-media">
+          <div className="sentinel-media__photo sentinel-media__photo--one"><img src={assets.sentinelOne} alt="Sentinels FTC at competition" loading="lazy" /></div>
+          <div className="sentinel-media__photo sentinel-media__photo--two"><img src={assets.sentinelTwo} alt="Sentinels FTC team during competition" loading="lazy" /></div>
+          <div className="sentinel-media__card"><img src={assets.sentinelHacks} alt="Sentinel Hacks social card" loading="lazy" /></div>
         </TiltCard>
       </article>
 
