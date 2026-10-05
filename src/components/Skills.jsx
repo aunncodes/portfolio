@@ -137,9 +137,9 @@ function formatDuration(start) {
 
   const years = Math.floor(months / 12)
   const remainder = months % 12
-  if (years && remainder) return '~' + years + 'y ' + remainder + 'mo'
-  if (years) return '~' + years + 'y'
-  return '~' + (remainder || 1) + 'mo'
+  if (years && remainder) return years + 'y ' + remainder + 'mo'
+  if (years) return years + 'y'
+  return (remainder || 1) + 'mo'
 }
 
 function SkillIcon({ skill }) {
