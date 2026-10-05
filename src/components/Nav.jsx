@@ -27,6 +27,7 @@ export default function Nav() {
       </a>
       <nav className="nav__links" aria-label="Primary navigation">
         <a href="#projects" className="magnetic">Projects</a>
+        <a href="#skills" className="magnetic">Skills</a>
         <a href="#experience" className="magnetic">Experience</a>
         <a href="https://github.com/aunncodes" target="_blank" rel="noreferrer" className="magnetic">GitHub ↗</a>
       </nav>
